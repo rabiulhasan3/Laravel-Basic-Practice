@@ -31,4 +31,6 @@ Route::group(['prefix'=>'eloquent','namespace'=>'eloquent','as'=>'eloquent.'],fu
 
 	Route::get('has-many-through','hasManyThroughController@hasManyThrough');
 
+	Route::get('morph','morphController@morph');
+
 });

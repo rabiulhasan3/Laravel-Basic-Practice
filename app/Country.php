@@ -13,4 +13,8 @@ class Country extends Model
     public function posts(){
     	return $this->hasManyThrough(Post::class,People::class);
     }
+
+    public function peoples(){
+    	return $this->hasMany(People::class);
+    }
 }

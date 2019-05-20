@@ -10,6 +10,9 @@ class hasManyThroughController extends Controller
 {
     public function hasManyThrough(){
     	$country = Country::find(1);
-    	return $country->posts;
+    	$peoples = $country->peoples;
+    	foreach($peoples as $people){
+    		echo $people->posts;
+    	}
     }
 }
