@@ -27,4 +27,6 @@ Route::group(['prefix'=>'eloquent','namespace'=>'eloquent','as'=>'eloquent.'],fu
 
 	Route::get('one-to-many','oneToManyController@oneToMany');
 
+	Route::get('many-to-many','manyToManyController@manyToMany');
+
 });
