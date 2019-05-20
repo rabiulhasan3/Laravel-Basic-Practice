@@ -24,4 +24,7 @@ Route::group(['prefix'=>'eloquent','namespace'=>'eloquent','as'=>'eloquent.'],fu
 	Route::get('has-one','oneToOneController@hasOne');
 	Route::get('belongs-to','oneToOneController@belongsTo');
 
+
+	Route::get('one-to-many','oneToManyController@oneToMany');
+
 });

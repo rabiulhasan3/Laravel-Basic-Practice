@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Passport;
+use App\Mobile;
 
 class User extends Authenticatable
 {
@@ -40,5 +41,9 @@ class User extends Authenticatable
 
     public function passport(){
         return $this->hasOne(Passport::class);
+    }
+
+    public function mobiles(){
+        return $this->hasMany(Mobile::class);
     }
 }
