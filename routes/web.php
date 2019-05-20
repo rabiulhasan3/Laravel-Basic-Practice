@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['prefix'=>'eloquent','namespace'=>'eloquent','as'=>'eloquent.'],function(){
+
+	Route::get('has-one','oneToOneController@hasOne');
+	Route::get('belongs-to','oneToOneController@belongsTo');
+
+});
